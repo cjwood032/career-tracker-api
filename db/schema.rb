@@ -14,20 +14,22 @@ ActiveRecord::Schema.define(version: 2019_01_04_153935) do
 
   create_table "careers", force: :cascade do |t|
     t.string "title"
+    t.string "company"
+    t.string "location"
     t.date "date_added"
     t.string "link"
     t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "details", force: :cascade do |t|
     t.date "update_date"
     t.string "step"
     t.date "last_contact"
     t.string "contact_email"
     t.string "contact_name"
     t.string "contact_title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "details", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
