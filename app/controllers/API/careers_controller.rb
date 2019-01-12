@@ -1,6 +1,7 @@
 class Api::CareersController < ApplicationController
     before_action :set_career, only: [:show, :update, :destroy]
     def create
+
        career= Career.new(career_params)
        if career.save
         render json: career
@@ -36,7 +37,15 @@ class Api::CareersController < ApplicationController
     end
     private
     def career_params
-        params.require(:career).permit(:body) #update later
+        params.permit(
+            :title,
+            :link,
+            :company,
+            :location,
+            :description,
+            :id
+            )
+        
     end
     
     def set_career
