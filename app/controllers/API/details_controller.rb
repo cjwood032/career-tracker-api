@@ -36,7 +36,14 @@ class Api::DetailsController < ApplicationController
     end
     private
     def detail_params
-        params.require(:detail).permit(:body) #update later
+        params.permit(
+            :step,
+            :update_date,
+            :last_contact,
+            :contact_email,
+            :contact_name,
+            :contact_title
+        )
     end
     
     def set_detail

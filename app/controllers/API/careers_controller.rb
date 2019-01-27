@@ -16,7 +16,7 @@ class Api::CareersController < ApplicationController
     end
     
     def show
-        render json: @career, include: :details
+        render json: @career#, include: :details
     end
     
     def update
@@ -42,8 +42,7 @@ class Api::CareersController < ApplicationController
             :link,
             :company,
             :location,
-            :description,
-            :id
+            :description
             )
         
     end
