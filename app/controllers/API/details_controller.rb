@@ -37,6 +37,7 @@ class Api::DetailsController < ApplicationController
     private
     def detail_params
         params.permit(
+            :company,
             :step,
             :update_date,
             :last_contact,
