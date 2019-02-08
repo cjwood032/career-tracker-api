@@ -39,11 +39,11 @@ class Api::DetailsController < ApplicationController
         params.permit(
             :company,
             :step,
-            :update_date,
-            :last_contact,
-            :contact_email,
-            :contact_name,
-            :contact_title
+            :updated,
+            :contacted,
+            :email,
+            :name,
+            :role
         )
     end
     
