@@ -43,7 +43,16 @@ class Api::DetailsController < ApplicationController
             :contacted,
             :email,
             :name,
-            :role
+            :role,
+            :action,
+            :method,
+            :first,
+            :referral,
+            :jobTitle,
+            :jobLink,
+            :notes,
+            :complete,
+            :status
         )
     end
     
