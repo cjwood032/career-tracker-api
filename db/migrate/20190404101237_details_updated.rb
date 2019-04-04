@@ -1,4 +1,4 @@
-class DetailsUpdate < ActiveRecord::Migration[5.2]
+class DetailsUpdated < ActiveRecord::Migration[5.2]
   def change
     rename_column :details, :updated, :update_date
     rename_column :details, :contacted, :contact_date
