@@ -2,7 +2,7 @@ class Api::DetailsController < ApplicationController
     before_action :set_detail, only: [:show, :update, :destroy]
     def create
        detail= Detail.new(detail_params)
-       detail.updated=Time.now.strftime("%m/%d/%Y")
+       detail.update_date=Time.now.strftime("%m/%d/%Y")
        if detail.save
         render json: detail
        else
