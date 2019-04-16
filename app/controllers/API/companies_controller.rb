@@ -42,7 +42,7 @@ class Api::CompaniesController < ApplicationController
             :company_link,
             :company_glassdoor,
             :location,
-            :reviews
+            :reviews #need to build out reviews and set up has many relationship
             )
         
     end
