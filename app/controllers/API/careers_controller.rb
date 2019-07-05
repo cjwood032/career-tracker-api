@@ -36,12 +36,7 @@ class Api::CareersController < ApplicationController
 
     end
 
-    def import
-        #binding.pry
-        @career=Career.new
-        @active=@career.get_activity
-        render json: @active
-    end
+    
     private
     def career_params
         params.permit(

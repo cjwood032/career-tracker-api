@@ -35,6 +35,11 @@ class Api::DetailsController < ApplicationController
         end
 
     end
+    def import
+        @detail=Detail.new
+        @active=@detail.get_activity
+        render json: @active
+    end
     private
     def detail_params
         params.permit(
