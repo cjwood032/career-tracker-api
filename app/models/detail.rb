@@ -38,7 +38,8 @@ class Detail < ApplicationRecord
         "notes" => a[10],
         "step" => a[11],
         "complete" => a[12],
-        "status" => a[13]
+        "status" => a[13],
+        "imported" => true
         })
         @detail.save
     end
@@ -47,7 +48,7 @@ class Detail < ApplicationRecord
         self.establish_session
         active=@sheets[2]
         details=Detail.all
-        details= details.keep_if #keep if imported == false
+        details= details.keep_if {|deet| deet.imported != true}
         details.each do |d|
             row = active.length
             active[row, 0] = d.update_date #iterate over the values
