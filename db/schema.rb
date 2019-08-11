@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_04_101237) do
+ActiveRecord::Schema.define(version: 2019_08_11_074312) do
 
   create_table "careers", force: :cascade do |t|
     t.string "title"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2019_04_04_101237) do
     t.string "notes"
     t.string "complete"
     t.string "status"
+    t.boolean "imported"
   end
 
 end
