@@ -1,4 +1,4 @@
-class Api::DetailsController < ApplicationController
+class Api::V1::DetailsController < ApplicationController
     before_action :set_detail, only: [:show, :update, :destroy]
     def create
        detail= Detail.new(detail_params)
@@ -36,15 +36,16 @@ class Api::DetailsController < ApplicationController
 
     end
     
-    def import
-        @detail=Detail.new
-        @active=@detail.get_activity
-        render json: @active
-    end
-
-    def export
-        
-    end
+    #def import
+    #    @detail=Detail.new
+    #    @active=@detail.get_activity
+    #    render json: @active
+    #    binding.pry
+    #end
+#
+    #def export
+    #    
+    #end
     private
     def detail_params
         params.permit(
