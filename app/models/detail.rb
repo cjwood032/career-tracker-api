@@ -67,7 +67,6 @@ class Detail < ApplicationRecord
             active[row, 13] = d.status
         end
 
-        end
         active.save
     end 
 

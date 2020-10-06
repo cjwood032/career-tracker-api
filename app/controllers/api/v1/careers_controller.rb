@@ -1,4 +1,4 @@
-class Api::CareersController < ApplicationController
+class Api::V1::CareersController < ApplicationController
     before_action :set_career, only: [:show, :update, :destroy]
     def create
 
