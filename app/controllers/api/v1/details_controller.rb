@@ -36,16 +36,16 @@ class Api::V1::DetailsController < ApplicationController
 
     end
     
-    #def import
-    #    @detail=Detail.new
-    #    @active=@detail.get_activity
-    #    render json: @active
-    #    binding.pry
-    #end
-#
-    #def export
-    #    
-    #end
+    def import
+        @detail=Detail.new
+        @active=@detail.get_activity
+        render json: @active
+        binding.pry
+    end
+
+    def export
+        
+    end
     private
     def detail_params
         params.permit(
