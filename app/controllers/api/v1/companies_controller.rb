@@ -38,12 +38,16 @@ class Api::V1::CompaniesController < ApplicationController
     private
     def company_params
         params.permit(
-            :company_name,
-            :company_link,
-            :company_glassdoor,
-            :location,
-            :reviews #need to build out reviews and set up has many relationship
-            )
+            :company,
+            :name,
+            :date,            
+            :job_title,
+            :requirements,
+            :job_description,
+            :notes,
+            :reviews,
+            :about_company
+        )
         
     end
     
